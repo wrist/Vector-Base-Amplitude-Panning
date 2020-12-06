@@ -129,6 +129,8 @@ else
         end
     end
 end
-gains = gains/sqrt(sum(gains.^2));
+%gains = gains/sqrt(sum(gains.^2));
+eps = 1.e-12;
+gains = gains/(sqrt(sum(gains.^2))+eps);
 
 end
